@@ -1,0 +1,104 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" width="100%" height="100%">
+  <defs>
+    <linearGradient id="api-bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#090d16"/>
+      <stop offset="100%" stop-color="#020617"/>
+    </linearGradient>
+    <pattern id="api-grid" width="30" height="30" patternUnits="userSpaceOnUse">
+      <path d="M 30 0 L 0 0 0 30" fill="none" stroke="#1e293b" stroke-width="0.75" opacity="0.3"/>
+    </pattern>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="675" fill="url(#api-bg)"/>
+  <rect width="1200" height="675" fill="url(#api-grid)"/>
+
+  <!-- Architecture Diagram Board -->
+  <rect x="80" y="60" width="1040" height="555" rx="16" fill="#0f172a" fill-opacity="0.8" stroke="#1e293b" stroke-width="1.5"/>
+
+  <!-- Header -->
+  <text x="120" y="110" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="14" font-weight="bold" fill="#f59e0b" letter-spacing="2">// BACKEND ARCHITECTURE PIPELINE</text>
+  <text x="120" y="135" font-family="ui-sans-serif, system-ui, sans-serif" font-size="20" font-weight="bold" fill="#f8fafc">RESTful Service Core [.NET / ASP.NET Core API]</text>
+
+  <!-- Pipeline Layers Flow -->
+  <!-- 1. Client / Inbound Request -->
+  <g transform="translate(120, 180)">
+    <rect width="180" height="240" rx="12" fill="#1e293b" stroke="#334155" stroke-width="1"/>
+    <text x="90" y="40" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="11" font-weight="bold" fill="#38bdf8" text-anchor="middle">01. INBOUND</text>
+    <text x="90" y="65" font-family="ui-sans-serif, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#ffffff" text-anchor="middle">HTTP Request</text>
+    
+    <rect x="20" y="95" width="140" height="28" rx="6" fill="#0f172a"/>
+    <text x="30" y="114" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="10" fill="#a7f3d0">GET /api/v1/res</text>
+
+    <rect x="20" y="135" width="140" height="28" rx="6" fill="#0f172a"/>
+    <text x="30" y="154" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="10" fill="#fde047">POST /api/v1/auth</text>
+
+    <rect x="20" y="180" width="140" height="36" rx="6" fill="#0284c7" fill-opacity="0.2" stroke="#0284c7" stroke-width="1"/>
+    <text x="90" y="202" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="10" fill="#38bdf8" text-anchor="middle">TLS / HTTPS</text>
+  </g>
+
+  <!-- Flow Arrow 1 -->
+  <path d="M 315 300 L 375 300" stroke="#475569" stroke-width="2" stroke-dasharray="4 4"/>
+  <polygon points="380,300 372,295 372,305" fill="#475569"/>
+
+  <!-- 2. Middleware & Filters -->
+  <g transform="translate(390, 180)">
+    <rect width="200" height="240" rx="12" fill="#1e293b" stroke="#334155" stroke-width="1"/>
+    <text x="100" y="40" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="11" font-weight="bold" fill="#f59e0b" text-anchor="middle">02. MIDDLEWARE</text>
+    <text x="100" y="65" font-family="ui-sans-serif, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#ffffff" text-anchor="middle">Pipeline &amp; Security</text>
+
+    <rect x="20" y="90" width="160" height="24" rx="4" fill="#0f172a" stroke="#d97706" stroke-width="0.5"/>
+    <text x="100" y="106" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="10" fill="#fbbf24" text-anchor="middle">Global Exception</text>
+
+    <rect x="20" y="125" width="160" height="24" rx="4" fill="#0f172a" stroke="#d97706" stroke-width="0.5"/>
+    <text x="100" y="141" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="10" fill="#fbbf24" text-anchor="middle">Request Logging</text>
+
+    <rect x="20" y="160" width="160" height="24" rx="4" fill="#0f172a" stroke="#d97706" stroke-width="0.5"/>
+    <text x="100" y="176" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="10" fill="#fbbf24" text-anchor="middle">Validation Filters</text>
+  </g>
+
+  <!-- Flow Arrow 2 -->
+  <path d="M 605 300 L 665 300" stroke="#475569" stroke-width="2" stroke-dasharray="4 4"/>
+  <polygon points="670,300 662,295 662,305" fill="#475569"/>
+
+  <!-- 3. Controllers & Domain Service -->
+  <g transform="translate(680, 180)">
+    <rect width="210" height="240" rx="12" fill="#1e293b" stroke="#334155" stroke-width="1"/>
+    <text x="105" y="40" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="11" font-weight="bold" fill="#10b981" text-anchor="middle">03. DOMAIN CORE</text>
+    <text x="105" y="65" font-family="ui-sans-serif, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#ffffff" text-anchor="middle">Controllers &amp; Services</text>
+
+    <rect x="20" y="90" width="170" height="32" rx="4" fill="#0f172a"/>
+    <text x="30" y="110" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="10" fill="#34d399">ApiControllerBase</text>
+
+    <rect x="20" y="130" width="170" height="32" rx="4" fill="#0f172a"/>
+    <text x="30" y="150" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="10" fill="#34d399">IService&lt;TEntity&gt;</text>
+
+    <rect x="20" y="170" width="170" height="32" rx="4" fill="#0f172a"/>
+    <text x="30" y="190" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="10" fill="#34d399">Data Contracts / DTO</text>
+  </g>
+
+  <!-- Flow Arrow 3 -->
+  <path d="M 905 300 L 945 300" stroke="#475569" stroke-width="2" stroke-dasharray="4 4"/>
+  <polygon points="950,300 942,295 942,305" fill="#475569"/>
+
+  <!-- 4. Python Data Scripts / Persistence -->
+  <g transform="translate(955, 180)">
+    <rect width="130" height="240" rx="12" fill="#1e293b" stroke="#334155" stroke-width="1"/>
+    <text x="65" y="40" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="10" font-weight="bold" fill="#a855f7" text-anchor="middle">04. UTILS</text>
+    <text x="65" y="65" font-family="ui-sans-serif, system-ui, sans-serif" font-size="12" font-weight="bold" fill="#ffffff" text-anchor="middle">Python Scripts</text>
+
+    <rect x="15" y="100" width="100" height="40" rx="4" fill="#0f172a"/>
+    <text x="65" y="124" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="9" fill="#c084fc" text-anchor="middle">Data Seeder</text>
+
+    <rect x="15" y="155" width="100" height="40" rx="4" fill="#0f172a"/>
+    <text x="65" y="179" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="9" fill="#c084fc" text-anchor="middle">Smoke Tests</text>
+  </g>
+
+  <!-- Status Bar Footer -->
+  <g transform="translate(120, 480)">
+    <rect width="960" height="50" rx="8" fill="#111827" stroke="#374151" stroke-width="1"/>
+    <circle cx="25" cy="25" r="5" fill="#f59e0b"/>
+    <text x="40" y="30" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="12" fill="#fbbf24">STATUS: ACTIVE IN-PROGRESS DEVELOPMENT</text>
+    <text x="940" y="30" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="11" fill="#9ca3af" text-anchor="end">.NET API CORE // PYTHON // REST</text>
+  </g>
+</svg>

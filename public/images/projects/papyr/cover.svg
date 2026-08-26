@@ -1,0 +1,88 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" width="100%" height="100%">
+  <defs>
+    <linearGradient id="papyr-bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f172a"/>
+      <stop offset="100%" stop-color="#020617"/>
+    </linearGradient>
+    <pattern id="papyr-grid" width="30" height="30" patternUnits="userSpaceOnUse">
+      <path d="M 30 0 L 0 0 0 30" fill="none" stroke="#334155" stroke-width="0.75" opacity="0.25"/>
+    </pattern>
+    <linearGradient id="book-grad-1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#3b82f6"/>
+      <stop offset="100%" stop-color="#1d4ed8"/>
+    </linearGradient>
+    <linearGradient id="book-grad-2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#10b981"/>
+      <stop offset="100%" stop-color="#047857"/>
+    </linearGradient>
+    <linearGradient id="book-grad-3" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#8b5cf6"/>
+      <stop offset="100%" stop-color="#6d28d9"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="675" fill="url(#papyr-bg)"/>
+  <rect width="1200" height="675" fill="url(#papyr-grid)"/>
+
+  <!-- UI Window Container -->
+  <rect x="100" y="70" width="1000" height="535" rx="16" fill="#1e293b" fill-opacity="0.7" stroke="#334155" stroke-width="1.5"/>
+
+  <!-- Window Header Bar -->
+  <path d="M 100 86 A 16 16 0 0 1 116 70 L 1084 70 A 16 16 0 0 1 1100 86 L 1100 120 L 100 120 Z" fill="#0f172a" fill-opacity="0.9"/>
+  <circle cx="130" cy="95" r="5" fill="#ef4444"/>
+  <circle cx="150" cy="95" r="5" fill="#f59e0b"/>
+  <circle cx="170" cy="95" r="5" fill="#10b981"/>
+  
+  <text x="600" y="100" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="13" font-weight="600" fill="#94a3b8" text-anchor="middle" letter-spacing="1">papyr-catalog.app // Angular &amp; Open Library API</text>
+
+  <!-- App Search Bar Mockup -->
+  <rect x="250" y="150" width="700" height="46" rx="8" fill="#0f172a" stroke="#475569" stroke-width="1"/>
+  <text x="280" y="178" font-family="ui-sans-serif, system-ui, sans-serif" font-size="14" fill="#64748b">Search books by title, author, or ISBN...</text>
+  <rect x="850" y="158" width="85" height="30" rx="6" fill="#10b981"/>
+  <text x="892" y="177" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="12" font-weight="bold" fill="#ffffff" text-anchor="middle">SEARCH</text>
+
+  <!-- Book Cards Grid -->
+  <!-- Card 1 -->
+  <g transform="translate(180, 230)">
+    <rect width="240" height="320" rx="10" fill="#0f172a" stroke="#334155" stroke-width="1"/>
+    <rect x="15" y="15" width="210" height="180" rx="6" fill="url(#book-grad-1)"/>
+    <text x="30" y="55" font-family="ui-sans-serif, system-ui, sans-serif" font-size="18" font-weight="bold" fill="#ffffff">Clean Code</text>
+    <text x="30" y="80" font-family="ui-sans-serif, system-ui, sans-serif" font-size="12" fill="#bfdbfe">Robert C. Martin</text>
+    <rect x="15" y="210" width="120" height="12" rx="4" fill="#334155"/>
+    <rect x="15" y="232" width="180" height="8" rx="4" fill="#1e293b"/>
+    <rect x="15" y="275" width="80" height="24" rx="4" fill="#10b981" fill-opacity="0.15" stroke="#10b981" stroke-width="1"/>
+    <text x="55" y="291" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="10" font-weight="bold" fill="#10b981" text-anchor="middle">READING</text>
+  </g>
+
+  <!-- Card 2 -->
+  <g transform="translate(480, 230)">
+    <rect width="240" height="320" rx="10" fill="#0f172a" stroke="#334155" stroke-width="1"/>
+    <rect x="15" y="15" width="210" height="180" rx="6" fill="url(#book-grad-2)"/>
+    <text x="30" y="55" font-family="ui-sans-serif, system-ui, sans-serif" font-size="18" font-weight="bold" fill="#ffffff">Designing Data-</text>
+    <text x="30" y="80" font-family="ui-sans-serif, system-ui, sans-serif" font-size="18" font-weight="bold" fill="#ffffff">Intensive Apps</text>
+    <text x="30" y="105" font-family="ui-sans-serif, system-ui, sans-serif" font-size="12" fill="#a7f3d0">Martin Kleppmann</text>
+    <rect x="15" y="210" width="140" height="12" rx="4" fill="#334155"/>
+    <rect x="15" y="232" width="160" height="8" rx="4" fill="#1e293b"/>
+    <rect x="15" y="275" width="80" height="24" rx="4" fill="#3b82f6" fill-opacity="0.15" stroke="#3b82f6" stroke-width="1"/>
+    <text x="55" y="291" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="10" font-weight="bold" fill="#60a5fa" text-anchor="middle">TO READ</text>
+  </g>
+
+  <!-- Card 3 -->
+  <g transform="translate(780, 230)">
+    <rect width="240" height="320" rx="10" fill="#0f172a" stroke="#334155" stroke-width="1"/>
+    <rect x="15" y="15" width="210" height="180" rx="6" fill="url(#book-grad-3)"/>
+    <text x="30" y="55" font-family="ui-sans-serif, system-ui, sans-serif" font-size="18" font-weight="bold" fill="#ffffff">Structure &amp; Interp</text>
+    <text x="30" y="80" font-family="ui-sans-serif, system-ui, sans-serif" font-size="18" font-weight="bold" fill="#ffffff">of Computer Prog</text>
+    <text x="30" y="105" font-family="ui-sans-serif, system-ui, sans-serif" font-size="12" fill="#ddd6fe">Abelson &amp; Sussman</text>
+    <rect x="15" y="210" width="130" height="12" rx="4" fill="#334155"/>
+    <rect x="15" y="232" width="170" height="8" rx="4" fill="#1e293b"/>
+    <rect x="15" y="275" width="90" height="24" rx="4" fill="#8b5cf6" fill-opacity="0.15" stroke="#8b5cf6" stroke-width="1"/>
+    <text x="60" y="291" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="10" font-weight="bold" fill="#c084fc" text-anchor="middle">COMPLETED</text>
+  </g>
+
+  <!-- Tech Badges Footer -->
+  <g transform="translate(100, 615)">
+    <text x="0" y="25" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="12" font-weight="600" fill="#10b981">STACK: Angular // TypeScript // RxJS // Open Library API // LocalStorage</text>
+  </g>
+</svg>
