@@ -1,0 +1,121 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" width="100%" height="100%">
+  <defs>
+    <linearGradient id="contact-api-bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0a0f1d"/>
+      <stop offset="100%" stop-color="#020617"/>
+    </linearGradient>
+    <pattern id="contact-api-grid" width="30" height="30" patternUnits="userSpaceOnUse">
+      <path d="M 30 0 L 0 0 0 30" fill="none" stroke="#1e293b" stroke-width="0.75" opacity="0.35"/>
+    </pattern>
+    <linearGradient id="swagger-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#10b981"/>
+      <stop offset="100%" stop-color="#059669"/>
+    </linearGradient>
+    <linearGradient id="dotnet-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#512bd4"/>
+      <stop offset="100%" stop-color="#3b1f9e"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="675" fill="url(#contact-api-bg)"/>
+  <rect width="1200" height="675" fill="url(#contact-api-grid)"/>
+
+  <!-- Swagger / API Testing Board -->
+  <rect x="80" y="60" width="1040" height="555" rx="16" fill="#0f172a" stroke="#1e293b" stroke-width="1.5"/>
+
+  <!-- Header -->
+  <text x="120" y="105" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="13" font-weight="bold" fill="#38bdf8" letter-spacing="2">// ASP.NET CORE REST API &amp; EF CORE</text>
+  <text x="120" y="135" font-family="ui-sans-serif, system-ui, sans-serif" font-size="22" font-weight="bold" fill="#f8fafc">Contact Management API</text>
+
+  <!-- Left: Interactive Swagger UI Endpoints -->
+  <g transform="translate(120, 165)">
+    <rect width="520" height="360" rx="12" fill="#1e293b" stroke="#334155" stroke-width="1"/>
+    <text x="25" y="32" font-family="ui-monospace, SFMono-Regular, monospace" font-size="12" font-weight="bold" fill="#94a3b8">SWAGGER / OPENAPI SPECIFICATION</text>
+
+    <!-- GET /contacts -->
+    <g transform="translate(20, 50)">
+      <rect width="480" height="42" rx="6" fill="#0f172a" stroke="#0284c7" stroke-width="1"/>
+      <rect x="8" y="8" width="55" height="26" rx="4" fill="#0284c7"/>
+      <text x="35" y="25" font-family="ui-monospace, monospace" font-size="11" font-weight="bold" fill="#ffffff" text-anchor="middle">GET</text>
+      <text x="75" y="25" font-family="ui-monospace, monospace" font-size="12" fill="#f8fafc">/contacts</text>
+      <text x="460" y="25" font-family="ui-sans-serif, sans-serif" font-size="11" fill="#64748b" text-anchor="end">Retrieve all contacts</text>
+    </g>
+
+    <!-- GET /contacts/id/{id} -->
+    <g transform="translate(20, 102)">
+      <rect width="480" height="42" rx="6" fill="#0f172a" stroke="#0284c7" stroke-width="1"/>
+      <rect x="8" y="8" width="55" height="26" rx="4" fill="#0284c7"/>
+      <text x="35" y="25" font-family="ui-monospace, monospace" font-size="11" font-weight="bold" fill="#ffffff" text-anchor="middle">GET</text>
+      <text x="75" y="25" font-family="ui-monospace, monospace" font-size="12" fill="#f8fafc">/contacts/id/{id}</text>
+      <text x="460" y="25" font-family="ui-sans-serif, sans-serif" font-size="11" fill="#64748b" text-anchor="end">Find contact by ID</text>
+    </g>
+
+    <!-- POST /contacts -->
+    <g transform="translate(20, 154)">
+      <rect width="480" height="42" rx="6" fill="#0f172a" stroke="#10b981" stroke-width="1"/>
+      <rect x="8" y="8" width="55" height="26" rx="4" fill="#10b981"/>
+      <text x="35" y="25" font-family="ui-monospace, monospace" font-size="11" font-weight="bold" fill="#ffffff" text-anchor="middle">POST</text>
+      <text x="75" y="25" font-family="ui-monospace, monospace" font-size="12" fill="#f8fafc">/contacts</text>
+      <text x="460" y="25" font-family="ui-sans-serif, sans-serif" font-size="11" fill="#64748b" text-anchor="end">Create new contact</text>
+    </g>
+
+    <!-- PUT /contacts/{id} -->
+    <g transform="translate(20, 206)">
+      <rect width="480" height="42" rx="6" fill="#0f172a" stroke="#f59e0b" stroke-width="1"/>
+      <rect x="8" y="8" width="55" height="26" rx="4" fill="#f59e0b"/>
+      <text x="35" y="25" font-family="ui-monospace, monospace" font-size="11" font-weight="bold" fill="#ffffff" text-anchor="middle">PUT</text>
+      <text x="75" y="25" font-family="ui-monospace, monospace" font-size="12" fill="#f8fafc">/contacts/{id}</text>
+      <text x="460" y="25" font-family="ui-sans-serif, sans-serif" font-size="11" fill="#64748b" text-anchor="end">Update contact details</text>
+    </g>
+
+    <!-- DELETE /contacts/{id} -->
+    <g transform="translate(20, 258)">
+      <rect width="480" height="42" rx="6" fill="#0f172a" stroke="#ef4444" stroke-width="1"/>
+      <rect x="8" y="8" width="55" height="26" rx="4" fill="#ef4444"/>
+      <text x="35" y="25" font-family="ui-monospace, monospace" font-size="10" font-weight="bold" fill="#ffffff" text-anchor="middle">DELETE</text>
+      <text x="75" y="25" font-family="ui-monospace, monospace" font-size="12" fill="#f8fafc">/contacts/{id}</text>
+      <text x="460" y="25" font-family="ui-sans-serif, sans-serif" font-size="11" fill="#64748b" text-anchor="end">Remove contact</text>
+    </g>
+
+    <!-- Status Bar -->
+    <rect x="20" y="310" width="480" height="34" rx="6" fill="#0f172a"/>
+    <circle cx="35" cy="327" r="4" fill="#10b981"/>
+    <text x="50" y="331" font-family="ui-monospace, monospace" font-size="11" fill="#a7f3d0">Middleware: StorageUnavailableException Interceptor Active</text>
+  </g>
+
+  <!-- Right: Architecture Stack & Data Flow -->
+  <g transform="translate(670, 165)">
+    <rect width="390" height="360" rx="12" fill="#1e293b" stroke="#334155" stroke-width="1"/>
+    <text x="25" y="32" font-family="ui-monospace, SFMono-Regular, monospace" font-size="12" font-weight="bold" fill="#a855f7">// LAYERED ARCHITECTURE</text>
+
+    <!-- Layer 1: Controllers -->
+    <rect x="25" y="55" width="340" height="50" rx="8" fill="#0f172a" stroke="#512bd4" stroke-width="1"/>
+    <text x="45" y="77" font-family="ui-monospace, monospace" font-size="11" font-weight="bold" fill="#a78bfa">01. Controllers</text>
+    <text x="45" y="93" font-family="ui-sans-serif, sans-serif" font-size="10" fill="#94a3b8">ContactsController with REST endpoints &amp; DTO binding</text>
+
+    <!-- Layer 2: Services & Mappers -->
+    <rect x="25" y="120" width="340" height="50" rx="8" fill="#0f172a" stroke="#512bd4" stroke-width="1"/>
+    <text x="45" y="142" font-family="ui-monospace, monospace" font-size="11" font-weight="bold" fill="#a78bfa">02. Services &amp; Mappers</text>
+    <text x="45" y="158" font-family="ui-sans-serif, sans-serif" font-size="10" fill="#94a3b8">IContactsService, ContactMapper, Status Enums</text>
+
+    <!-- Layer 3: EF Core & SQLite -->
+    <rect x="25" y="185" width="340" height="50" rx="8" fill="#0f172a" stroke="#0284c7" stroke-width="1"/>
+    <text x="45" y="207" font-family="ui-monospace, monospace" font-size="11" font-weight="bold" fill="#38bdf8">03. Persistence (EF Core)</text>
+    <text x="45" y="223" font-family="ui-sans-serif, sans-serif" font-size="10" fill="#94a3b8">AppDbContext, SQLite (contacts.db), Migrations</text>
+
+    <!-- Layer 4: Middleware -->
+    <rect x="25" y="250" width="340" height="50" rx="8" fill="#0f172a" stroke="#d97706" stroke-width="1"/>
+    <text x="45" y="272" font-family="ui-monospace, monospace" font-size="11" font-weight="bold" fill="#fbbf24">04. Custom Middleware</text>
+    <text x="45" y="288" font-family="ui-sans-serif, sans-serif" font-size="10" fill="#94a3b8">StorageUnavailableException centralized handling</text>
+
+    <!-- Active Development Badge -->
+    <rect x="25" y="315" width="340" height="30" rx="6" fill="#d97706" fill-opacity="0.15" stroke="#d97706" stroke-width="1"/>
+    <text x="195" y="334" font-family="ui-monospace, monospace" font-size="11" font-weight="bold" fill="#fbbf24" text-anchor="middle">ACTIVE DEVELOPMENT // .NET 9.0</text>
+  </g>
+
+  <!-- Bottom Bar -->
+  <g transform="translate(120, 540)">
+    <text x="0" y="25" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="12" font-weight="600" fill="#10b981">TECH: ASP.NET Core Web API // Entity Framework Core // SQLite // Swagger UI // C#</text>
+  </g>
+</svg>

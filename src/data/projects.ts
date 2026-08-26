@@ -21,7 +21,7 @@ export const projectsData: Project[] = [
     role: "Frontend & Application Architecture",
     year: "2024",
     githubUrl: "https://github.com/Ramzyayman/papyr",
-    liveUrl: undefined, // Optional: omitted if no live link is active
+    liveUrl: undefined,
     coverImage: "/images/projects/papyr/cover.png",
     galleryImages: [
       {
@@ -33,7 +33,7 @@ export const projectsData: Project[] = [
     technicalDetails: [
       "Reactive stream architecture using RxJS observables for debounced search queries and asynchronous API data fetching.",
       "Integration with the public Open Library Search and Works APIs for dynamic book cover retrieval, author resolution, and publication metadata.",
-      "Client-side state persistence layer utilizing localStorage to maintain reading statuses (e.g. Want to Read, Currently Reading, Completed) across browser sessions without requiring an immediate database round-trip.",
+      "Client-side state persistence layer utilizing localStorage to maintain reading statuses across browser sessions without requiring an immediate database round-trip.",
       "Modular Angular component hierarchy separating catalog discovery, search filtering, book detail views, and saved collections.",
     ],
     challenges: [
@@ -53,50 +53,101 @@ export const projectsData: Project[] = [
     ],
   },
   {
-    title: "RESTful Service Core",
-    slug: "restful-service-core",
+    title: "Kaszinó",
+    slug: "kaszino",
     shortDescription:
-      "An in-progress backend API service exploring structured domain layering, endpoint routing, and request validation pipelines.",
+      "A modern Discord economy and gambling bot built with Node.js, discord.js v14, and SQLite database persistence.",
     longDescription:
-      "This project represents an ongoing backend engineering exploration focused on clean architecture, structured error handling, and modular service separation. Built using ASP.NET Core Web API and supporting utility scripts in Python, it serves as an experimental foundation for building robust, type-safe API services.",
+      "Kaszinó is a feature-packed Discord economy bot created for community engagement. It implements a complete virtual economy with jobs, begging, player-to-player transfers, interactive gambling minigames (such as Mines and Coinflip), server leaderboards, and administrative controls with atomic SQLite transactions.",
+    status: "completed",
+    featured: true,
+    technologies: [
+      "Node.js",
+      "discord.js v14",
+      "JavaScript",
+      "SQLite",
+      "better-sqlite3",
+      "REST APIs",
+    ],
+    role: "Bot & Backend Architecture",
+    year: "2025",
+    githubUrl: "https://github.com/Ramzyayman/Kaszino",
+    liveUrl: undefined,
+    coverImage: "/images/projects/kaszino/cover.svg",
+    galleryImages: [
+      {
+        url: "/images/projects/kaszino/cover.svg",
+        caption: "Kaszinó - Discord economy interface, Mines minigame grid, and SQLite architecture",
+        alt: "Kaszinó Discord Bot Preview",
+      },
+    ],
+    technicalDetails: [
+      "Event-driven command handler and interaction router implementing discord.js v14 slash commands and interactive button components.",
+      "Persistent relational database layer utilizing SQLite via better-sqlite3 with WAL (Write-Ahead Logging) mode for fast, atomic balance transactions.",
+      "Dynamic board generation and mathematical multiplier scaling algorithm for the interactive Mines minigame.",
+      "Command cooldown engine tracking timed actions (/work every 12h, /beg every 8h) with timestamp validation.",
+      "Restricted owner administrative command dispatcher supporting user ID and mention-based balance management.",
+    ],
+    challenges: [
+      "Preventing race conditions and balance duplication during rapid concurrent player commands.",
+      "Managing interactive Discord message button states and component collectors for live game sessions.",
+    ],
+    solutions: [
+      "Implemented synchronous, transaction-wrapped database operations with better-sqlite3 to guarantee balance integrity.",
+      "Designed dedicated game session handlers with automatic expiration timeouts and single-user interaction locks.",
+    ],
+    lessonsLearned: [
+      "Strengthened database schema design and transactional state management in Node.js.",
+      "Mastered discord.js v14 event-driven architecture and asynchronous lifecycle management.",
+    ],
+  },
+  {
+    title: "Contact Management API",
+    slug: "contact-management-api",
+    shortDescription:
+      "An ASP.NET Core Web API for contact management built with Entity Framework Core, SQLite, and custom exception middleware.",
+    longDescription:
+      "A structured RESTful backend service engineered with ASP.NET Core and C#. It provides comprehensive CRUD operations for contact records, unique email validation, centralized exception handling middleware, DTO mappers, and interactive OpenAPI/Swagger documentation.",
     status: "in-progress",
     featured: false,
     technologies: [
       ".NET / ASP.NET Core",
       "C#",
-      "Python",
+      "Entity Framework Core",
+      "SQLite",
+      "Swagger / OpenAPI",
       "RESTful APIs",
-      "Git",
     ],
-    role: "Backend Engineering",
-    year: "2025 - Active",
-    githubUrl: undefined, // Will be linked when repository is ready for public release
+    role: "Backend API Engineering",
+    year: "2026 - Active",
+    githubUrl: "https://github.com/Ramzyayman/MySecondApi",
     liveUrl: undefined,
-    coverImage: "/images/projects/api-project/cover.svg",
+    coverImage: "/images/projects/contact-api/cover.svg",
     galleryImages: [
       {
-        url: "/images/projects/api-project/cover.svg",
-        caption: "RESTful Service Core - In-progress API architecture and pipeline diagram",
-        alt: "API backend architecture preview",
+        url: "/images/projects/contact-api/cover.svg",
+        caption: "Contact Management API - Swagger UI endpoints and layered architecture pipeline",
+        alt: "Contact Management API Architecture Diagram",
       },
     ],
     technicalDetails: [
-      "Structured controller and service separation applying standard layered backend conventions.",
-      "Middleware-based centralized error handling and request lifecycle logging.",
-      "Exploration of data contracts, request validation rules, and standardized JSON response envelopes.",
-      "Utility tooling and data generation scripts implemented in Python.",
+      "Layered ASP.NET Core architecture separating Controllers, DTOs, Mappers, Domain Models, and Services.",
+      "Entity Framework Core ORM integration with SQLite persistence and schema migrations.",
+      "Custom error middleware (StorageUnavailableExceptionMiddleware) providing clean, standardized JSON error responses.",
+      "RESTful routing endpoints (/contacts, /contacts/id/{id}, /contacts/email/{email}) with duplicate conflict handling.",
+      "Interactive OpenAPI / Swagger documentation for endpoint contract verification and testing.",
     ],
     challenges: [
-      "Designing clean boundaries between business logic and transport protocols.",
-      "Establishing idiomatic ASP.NET Core dependency injection and configuration lifetimes.",
+      "Establishing strict boundaries between external request DTOs and internal domain models.",
+      "Handling database availability failures gracefully without exposing internal stack traces to API consumers.",
     ],
     solutions: [
-      "Adopting standard repository and service patterns to isolate domain operations.",
-      "Utilizing built-in ASP.NET Core dependency injection containers with explicit interface registrations.",
+      "Created dedicated ContactMapper and strongly typed service result envelopes (CreateContactResult, GetContactResult).",
+      "Developed centralized middleware to catch storage exceptions and map them to HTTP 503 / 400 responses.",
     ],
     lessonsLearned: [
-      "Understanding the power of compiled backend frameworks (.NET) in enforcing strict data contracts.",
-      "Building intuition for backend pipeline lifecycle and middleware ordering.",
+      "Gained practical experience implementing idiomatic ASP.NET Core Dependency Injection and service lifetimes.",
+      "Developed a deep appreciation for compiled type safety and ORM database migration workflows with EF Core.",
     ],
   },
 ];
