@@ -10,10 +10,10 @@ export const socialsData: SocialLink[] = [
   },
   {
     platform: "LinkedIn",
-    url: "https://linkedin.com/in/ramzy-ayman", // Placeholder: Replace with actual LinkedIn URL when ready
+    url: "https://www.linkedin.com/in/ramzy-ayman-314004406/",
     label: "LinkedIn Profile",
     username: "Ramzy Ayman",
-    isPlaceholder: true,
+    isPlaceholder: false,
   },
   {
     platform: "Email",
