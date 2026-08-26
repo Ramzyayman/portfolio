@@ -22,12 +22,12 @@ export const projectsData: Project[] = [
     year: "2024",
     githubUrl: "https://github.com/Ramzyayman/papyr",
     liveUrl: undefined, // Optional: omitted if no live link is active
-    coverImage: "/images/projects/papyr/cover.svg",
+    coverImage: "/images/projects/papyr/cover.png",
     galleryImages: [
       {
-        url: "/images/projects/papyr/cover.svg",
-        caption: "Papyr - Book search interface and reading collection overview",
-        alt: "Papyr book catalog UI preview",
+        url: "/images/projects/papyr/cover.png",
+        caption: "Papyr - Live book catalog homepage, search bar, and curated collections",
+        alt: "Papyr book catalog UI screenshot",
       },
     ],
     technicalDetails: [
