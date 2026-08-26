@@ -24,7 +24,7 @@ export const profileData: Profile = {
     "Continuous Learning & Tooling Exploration",
   ],
   learningPhilosophy: "Strong fundamentals enable fast adaptation. I actively embrace new tools and paradigms to build practical, well-engineered solutions.",
-  avatarUrl: "/images/avatar-placeholder.svg",
+  avatarUrl: "/images/profile.jpg",
   availability: {
     status: "Available for Freelance & Collaborative Projects",
     message: "Open for freelance projects and future engineering opportunities.",
