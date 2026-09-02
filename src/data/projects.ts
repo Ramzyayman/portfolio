@@ -150,6 +150,56 @@ export const projectsData: Project[] = [
       "Developed a deep appreciation for compiled type safety and ORM database migration workflows with EF Core.",
     ],
   },
+  {
+    title: "Ricksy Store",
+    slug: "ricksy-store",
+    shortDescription:
+      "A modern, full-stack ecommerce storefront built with Next.js App Router, Tailwind CSS, and Prisma ORM.",
+    longDescription:
+      "Ricksy Store is a full-featured ecommerce web application utilizing the Next.js framework. It integrates NextAuth for secure authentication, Prisma as a robust ORM connecting to a PostgreSQL database, and features a responsive, beautifully styled interface using Tailwind CSS and shadcn/ui. The store supports comprehensive user session management, product categorization, and tailored cart/order tracking.",
+    status: "in-progress",
+    featured: true,
+    technologies: [
+      "Next.js",
+      "TypeScript",
+      "Prisma",
+      "PostgreSQL",
+      "NextAuth.js",
+      "Tailwind CSS",
+      "Zustand",
+    ],
+    role: "Full-Stack Development",
+    year: "2026",
+    githubUrl: "https://github.com/Ramzyayman/ricksy-store",
+    liveUrl: undefined,
+    coverImage: "/images/projects/ricksy-store/cover.svg",
+    galleryImages: [
+      {
+        url: "/images/projects/ricksy-store/cover.svg",
+        caption: "Ricksy Store - Prisma Data Models and Next.js Architecture",
+        alt: "Ricksy Store Architecture diagram",
+      },
+    ],
+    technicalDetails: [
+      "Full-stack Next.js App Router architecture with React Server Components.",
+      "Relational database schema managed with Prisma ORM and hosted on PostgreSQL, handling categories, variants, and order workflows.",
+      "Authentication and session management via NextAuth.js.",
+      "Client-side state for cart interactions managed using Zustand.",
+      "Form validation pipelines with React Hook Form and Zod.",
+    ],
+    challenges: [
+      "Designing a scalable relational database schema that handles complex product variations, inventory stock, and order snapshots.",
+      "Creating seamless, type-safe data fetching patterns between Server Components and Prisma.",
+    ],
+    solutions: [
+      "Implemented a comprehensive PostgreSQL schema with cascade deletions and atomic references (e.g., saving snapshot price/sku strings on OrderItems).",
+      "Leveraged Server Actions and strict TypeScript interfaces for reliable end-to-end type safety during mutations.",
+    ],
+    lessonsLearned: [
+      "Gained deep expertise in Next.js 15 routing paradigms and server-side rendering strategies.",
+      "Mastered data modeling techniques for real-world ecommerce use cases.",
+    ],
+  },
 ];
 
 /** Get all projects */
