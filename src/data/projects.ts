@@ -157,7 +157,7 @@ export const projectsData: Project[] = [
       "A modern, full-stack ecommerce storefront built with Next.js App Router, Tailwind CSS, and Prisma ORM.",
     longDescription:
       "Ricksy Store is a full-featured ecommerce web application utilizing the Next.js framework. It integrates NextAuth for secure authentication, Prisma as a robust ORM connecting to a PostgreSQL database, and features a responsive, beautifully styled interface using Tailwind CSS and shadcn/ui. The store supports comprehensive user session management, product categorization, and tailored cart/order tracking.",
-    status: "in-progress",
+    status: "completed",
     featured: true,
     technologies: [
       "Next.js",
@@ -172,10 +172,10 @@ export const projectsData: Project[] = [
     year: "2026",
     githubUrl: "https://github.com/Ramzyayman/ricksy-store",
     liveUrl: undefined,
-    coverImage: "/images/projects/ricksy-store/cover.svg",
+    coverImage: "/images/projects/ricksy-store/cover.png",
     galleryImages: [
       {
-        url: "/images/projects/ricksy-store/cover.svg",
+        url: "/images/projects/ricksy-store/cover.png",
         caption: "Ricksy Store - Prisma Data Models and Next.js Architecture",
         alt: "Ricksy Store Architecture diagram",
       },
